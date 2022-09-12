@@ -104,8 +104,6 @@ extension ContentView {
     }
     
     private func resetTapped() {
-        print("Reset")
-        
         bill = ""
         selectedTip = ""
         numberOfPeople = ""
