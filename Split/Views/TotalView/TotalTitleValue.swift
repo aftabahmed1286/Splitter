@@ -31,7 +31,7 @@ struct TotalTitleValue: View {
 
 struct TotalTitleValue_Previews: PreviewProvider {
     
-    @State static var val = "$4.45"
+    @State static var val = "$ 4.45"
     
     static var previews: some View {
         TotalTitleValue(value: $val)

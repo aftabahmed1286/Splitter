@@ -20,7 +20,7 @@ struct NumberOfPeople: View {
                     Image(systemName: "person.fill")
                         .padding([.leading], 20)
                         .modifier(TitleOne())
-                    CustomTF(placeholder: "", txt: $num)
+                    CustomTF(placeholder: "", txt: $num, tfEntry: .int)
                 }
             }.background(Color(
                 CustomColor.green6.rawValue)

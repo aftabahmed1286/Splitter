@@ -71,11 +71,8 @@
 			children = (
 				3E7806FD2890639400ACF578 /* SplitApp.swift */,
 				3E7806FF2890639400ACF578 /* ContentView.swift */,
-				3E77CB5728C7BAAE007E963C /* Bill.swift */,
-				3E77CB5D28C7BC2B007E963C /* SelectTipPercentage.swift */,
-				3E77CB5928C7BB32007E963C /* NumberOfPeople.swift */,
-				3EC136C528C8504000FAFC37 /* TotalView */,
-				3E77CB5B28C7BB9D007E963C /* CustomTF.swift */,
+				3E7FB05E28CFAD5A0094D882 /* Views */,
+				3E7FB05F28CFAD7B0094D882 /* Common */,
 				3EC136CB28C85C9900FAFC37 /* Extension */,
 				3EC136C828C85B3E00FAFC37 /* Style */,
 				3E7807012890639600ACF578 /* Assets.xcassets */,
@@ -90,6 +87,25 @@
 				3E7807042890639600ACF578 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3E7FB05E28CFAD5A0094D882 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3E77CB5728C7BAAE007E963C /* Bill.swift */,
+				3E77CB5D28C7BC2B007E963C /* SelectTipPercentage.swift */,
+				3E77CB5928C7BB32007E963C /* NumberOfPeople.swift */,
+				3EC136C528C8504000FAFC37 /* TotalView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3E7FB05F28CFAD7B0094D882 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				3E77CB5B28C7BB9D007E963C /* CustomTF.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		3EC136C528C8504000FAFC37 /* TotalView */ = {

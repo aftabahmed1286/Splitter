@@ -55,8 +55,8 @@ struct TotalView: View {
 struct TotalView_Previews: PreviewProvider {
     
     @State static var shouldReset: Bool = false
-    @State static var tipPerPerson: String = ""
-    @State static var totalPerPerson: String = ""
+    @State static var tipPerPerson: String = "$ 4.12"
+    @State static var totalPerPerson: String = "$ 44"
     
     static var previews: some View {
         TotalView(tipPerPerson: $tipPerPerson,

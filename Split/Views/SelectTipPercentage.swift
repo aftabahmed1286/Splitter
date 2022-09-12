@@ -9,9 +9,6 @@ import SwiftUI
 
 struct SelectTipPercentage: View {
     
-    //@Binding var tipCent: String
-//    @State var customPercentage = ""
-    
     enum Constant: String {
         case custom = "Custom"
     }
@@ -79,7 +76,6 @@ struct SelectTipPercentage: View {
                     }
             }
             .frame(height: self.gridHeight())
-            Spacer()
         }
     }
 }

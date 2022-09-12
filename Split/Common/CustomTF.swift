@@ -7,9 +7,12 @@
 
 import SwiftUI
 
+enum TFEntry {
+    case dec
+    case int
+}
+
 struct CustomTF: View {
-    
-    //https://programmingwithswift.com/numbers-only-textfield-with-swiftui/
     
     var placeholder: String = ""
     
@@ -17,11 +20,13 @@ struct CustomTF: View {
     
     @State var trailPad = 20.0
     
+    var tfEntry = TFEntry.dec
+    
     var body: some View {
         VStack {
             TextField(placeholder, text: $txt)
                 .multilineTextAlignment(.trailing)
-                .keyboardType(.decimalPad)
+                .keyboardType(tfEntry == .dec ? .decimalPad : .numberPad)
                 .padding([.trailing], trailPad)
         }.frame(height: 50)
             .onChange(of: txt) {
@@ -65,8 +70,6 @@ struct CustomTF: View {
             txt = "0"
             return
         }
-        
-        
     }
 }
 struct CustomTF_Previews: PreviewProvider {

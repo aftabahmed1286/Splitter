@@ -13,13 +13,12 @@ struct ContentView: View {
     @State var selectedTip: String = ""
     @State var numberOfPeople: String = ""
     
+    @State var tipPerPerson: String = ""
+    @State var totalPerPerson: String = ""
+    
     @State var shouldReset = false
     
-    @State var tipPerPerson: String = ""//"$ --"
-    @State var totalPerPerson: String = ""//"$ --"
-    
     var body: some View {
-        
         ScrollView {
             VStack {
                 VStack {
@@ -46,7 +45,6 @@ struct ContentView: View {
                     .onChange(of: shouldReset) {
                         _ in
                         resetTapped()
-                        
                     }
                     .onChange(of: bill){
                         _ in
@@ -60,9 +58,6 @@ struct ContentView: View {
                         _ in
                         calculate()
                     }
-                
-                
-                
             }
         }
         .background(Color(CustomColor.green0.rawValue))
@@ -88,8 +83,11 @@ struct ContentView: View {
         
         //RESET Btn
     }
+}
+
+extension ContentView {
     
-    func calculate() {
+    private func calculate() {
         guard let bill = Double(bill),
               let numOfPeople = Double(numberOfPeople),
               let tipPercentage = Double(selectedTip)
@@ -105,10 +103,6 @@ struct ContentView: View {
         totalPerPerson = String(format: "$ %.2f", totalPerPer)//"\(totalPerPer)"
     }
     
-    func hideKeyboard() {
-        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
-    }
-    
     private func resetTapped() {
         print("Reset")
         
@@ -119,10 +113,14 @@ struct ContentView: View {
         tipPerPerson = ""
         totalPerPerson = ""
     }
+}
+
+extension ContentView {
     
-    private func tipPercentageSelected(_ tipPercentage: Int) {
-        print(tipPercentage)
+    private func hideKeyboard() {
+        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
     }
+
 }
 
 struct ContentView_Previews: PreviewProvider {
