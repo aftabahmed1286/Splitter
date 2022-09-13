@@ -80,7 +80,6 @@ struct ContentView: View {
         //HSTack
         //Tip amount/person - Amount
         //Total/person  - Amount
-        
         //RESET Btn
     }
 }
